@@ -1,5 +1,5 @@
 class EffectShell {
-  constructor(container = document.body, itemsWrapper = null) {
+  constructor(container = document.getElementById('app'), itemsWrapper = null) {
     this.container = container
     this.itemsWrapper = itemsWrapper
     if (!this.container || !this.itemsWrapper) return
@@ -19,7 +19,7 @@ class EffectShell {
     // renderer
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     this.renderer.setSize(this.viewport.width, this.viewport.height)
-    this.renderer.setPixelRatio(window.devicePixelRatio)
+    this.renderer.setPixelRatio = window.devicePixelRatio
     this.container.appendChild(this.renderer.domElement)
 
     // scene
@@ -172,7 +172,7 @@ class EffectShell {
 
   get itemsElements() {
     // convert NodeList to Array
-    const items = [...this.itemsWrapper.querySelectorAll('.link')]
+    const items = [...this.itemsWrapper.querySelectorAll('.ft-project')]
 
     //create Array of items including element, image and index
     return items.map((item, index) => ({
