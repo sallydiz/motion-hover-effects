@@ -1,5 +1,5 @@
 class StretchEffect extends EffectShell {
-  constructor(container = document.getElementById('app'), itemsWrapper = null, options = {}) {
+ constructor(container = document.body, itemsWrapper = null, options = {}) {
     super(container, itemsWrapper)
     if (!this.container || !this.itemsWrapper) return
 
