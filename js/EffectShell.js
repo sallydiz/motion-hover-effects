@@ -1,5 +1,5 @@
 class EffectShell {
-  constructor(container = document.getElementById('app'), itemsWrapper = null) {
+  constructor(container = document.body, itemsWrapper = null) {
     this.container = container
     this.itemsWrapper = itemsWrapper
     if (!this.container || !this.itemsWrapper) return
